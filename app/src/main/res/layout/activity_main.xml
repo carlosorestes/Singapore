@@ -31,23 +31,31 @@
         android:id="@+id/settingsEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/settings_value"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="313dp" />
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toEndOf="@+id/barrier5"
+        app:layout_constraintTop_toBottomOf="@+id/cameraType" />
 
     <EditText
         android:id="@+id/cameraType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginLeft="88dp"
         android:layout_marginTop="60dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/camera_value"
-        app:layout_constraintStart_toEndOf="@+id/cameraLabel"
+        app:layout_constraintBottom_toTopOf="@+id/settingsEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/barrier5"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
@@ -69,49 +77,71 @@
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23000002"
+        app:layout_constraintVertical_bias="0.29000002"
         app:srcCompat="@drawable/stars" />
 
     <TextView
         android:id="@+id/cameraLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginBottom="16dp"
         android:text="@string/camera"
         app:layout_constraintBottom_toBottomOf="@+id/cameraType"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/settingsLable"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginBottom="16dp"
         android:text="@string/settings"
         app:layout_constraintBottom_toBottomOf="@+id/settingsEdit"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/description"
         android:layout_width="409dp"
-        android:layout_height="307dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="29dp"
         android:text="@string/singapore_description"
+        app:layout_constraintBottom_toTopOf="@+id/discard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="359dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="31dp"
         android:text="@string/singapore"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="201dp" />
+        app:layout_constraintBottom_toTopOf="@+id/cameraLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="cameraLabel,settingsLable"
+        tools:layout_editor_absoluteX="411dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
